@@ -49,7 +49,7 @@ namespace SC___Mail_Validator
                 Console.Clear();
                 Utilities.printLogo();
                 Colorful.Console.WriteLine("[Select Options]\n", Color.AntiqueWhite);
-                Colorful.Console.WriteLine("[1] - [AliExpress]\n[2] - [Amazon]\n[3] - [Apple]\n[4] - [Booking]\n[5] - [Deezer]\n[6] - [Deliveroo]\n[7] - [LDLC]\n[8] - [Netflix]\n[9] - [Pornhub]\n[10] - [Spotify]\n[11] - [Uber]\n[12] - [WordPress]\n\n[13] - [Back]", Color.DarkBlue);
+                Colorful.Console.WriteLine("[1] - [AliExpress]\n[2] - [Amazon]\n[3] - [Apple]\n[4] - [Booking]\n[5] - [Deezer]\n[6] - [Deliveroo]\n[7] - [LDLC]\n[8] - [Netflix]\n[9] - [Pornhub]\n[10] - [Spotify]\n[11] - [Uber]\n[12] - [WordPress]\n[13] - [Disney+]\n[14] - [Paypal]\n\n[15] - [Back]", Color.DarkBlue);
                 vmType = Convert.ToInt32(Colorful.Console.ReadLine());
                 switch (vmType)
                 {
@@ -57,12 +57,16 @@ namespace SC___Mail_Validator
                         Utilities.invalidChoose();
                         selectVM();
                         break;
-                    case > 13:
+                    case > 15:
                         Utilities.invalidChoose();
                         selectVM();
                         break;
-                    case 13:
+                    case 15:
                         selectPanel();
+                        break;
+                    case 13:
+                        DisneyVM.getToken();
+                        Module.threadStart();
                         break;
                     default:
                         Console.Clear();

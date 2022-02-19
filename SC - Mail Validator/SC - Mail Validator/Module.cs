@@ -59,6 +59,12 @@ namespace SC___Mail_Validator
                         case 12:
                             WordpressVM.postRequests(username);
                             break;
+                        case 13:
+                            DisneyVM.postRequests(username);
+                            break;
+                        case 14:
+                            PaypalVM.postRequests(username);
+                            break;
                     }
                     switch (Panel.vnType)
                     {
